@@ -1,0 +1,11 @@
+{
+  "name": "tws-article-stock-shipping",
+  "title": "Article Stock and shipping info",
+  "description": "One the the article components, the stock shipping of it.",
+  "version": "0.0.1",
+  "angular": "twsArticleService",
+  "template": "component.mustache.html",
+  "dependencies": {
+    "tws-article-service": "^1.0.0"
+  }
+}
