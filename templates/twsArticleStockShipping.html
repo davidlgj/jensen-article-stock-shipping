@@ -4,7 +4,12 @@
       <div class="tws-article-stock-shipping--stock-info">
         <div ng-if="article.stock.useStock">
           <p ng-if="!articleData.hasStockInVariants">{{article.stock.message[lang]}}</p>
-          <p ng-if="articleData.hasStockInVariants && articleData.currentStock !== undefined">{{gettext('In stock')}}: {{articleData.currentStock}}</p>
+          <p ng-if="articleData.hasStockInVariants && articleData.currentStock !== undefined">
+            <span ng-if="articleData.currentStock > 0">
+              <link property="availability" href="http://schema.org/InStock" />
+            </span>
+            {{gettext('In stock')}}: {{articleData.currentStock}}
+          </p>
         </div>
       </div>
       <p ng-if="article.deliveryInfo && article.deliveryInfo[lang] !== null && !articleData.hasStockInVariants">{{gettext('Delivery')}}: {{article.deliveryInfo[lang]}}</p>
