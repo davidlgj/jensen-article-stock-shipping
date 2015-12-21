@@ -11,5 +11,34 @@
   },
   "script": [
     "scripts.min.js"
-  ]
+  ],
+  "i18n": {
+    "sv": {
+      "view": "po/view/sv.json"
+    },
+    "en": {
+      "view": "po/view/en.json"
+    },
+    "fi": {
+      "view": "po/view/fi.json"
+    },
+    "de": {
+      "view": "po/view/de.json"
+    },
+    "nb": {
+      "view": "po/view/nb.json"
+    },
+    "es": {
+      "view": "po/view/es.json"
+    },
+    "da": {
+      "view": "po/view/da.json"
+    },
+    "fr": {
+      "view": "po/view/fr.json"
+    },
+    "nl": {
+      "view": "po/view/nl.json"
+    }
+  }
 }
