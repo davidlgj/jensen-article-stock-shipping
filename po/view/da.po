@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Textalk Webshop\n"
-"PO-Revision-Date: 2015-11-16 08:37+0100\n"
+"PO-Revision-Date: 2016-02-12 08:57+0100\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
