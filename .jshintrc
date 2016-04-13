@@ -3,6 +3,7 @@
   "unused": true,
   "browser": true,
   "trailing": true,
+  "esnext": true,
   "indent": 2,
   "globals": {
     "console":false,
