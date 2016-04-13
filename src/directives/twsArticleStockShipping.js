@@ -1,6 +1,6 @@
 angular.module('twsArticleStockShipping').directive('twsArticleStockShipping',
-['twsApi.Jed', 'twsApi.Locale', '$q', 'twsArticleService.ArticleService',
-  function(jed, locale, $q, ArticleService) {
+['twsApi.Jed', 'twsApi.Locale', '$q', 'twsArticleService.ArticleService', '$sce',
+  function(jed, locale, $q, ArticleService, $sce) {
     'use strict';
     return {
       restrict: 'EA',
@@ -16,12 +16,21 @@ angular.module('twsArticleStockShipping').directive('twsArticleStockShipping',
           if (!value) { return; }
 
           ArticleService.update(scope.articleUid).then(function(articleData) {
+            const stock = articleData.article.stock;
+            const deliveryInfo = articleData.article.deliveryInfo;
+
             scope.article     = articleData.article;
             scope.articleData = articleData;
             scope.schemaForm  = articleData.schemaForm;
+
+            scope.stockMessage =  stock.message ? $sce.trustAsHtml(stock.message[scope.lang] || '')
+                                                : '';
+
+            scope.deliveryInfo =  deliveryInfo ? $sce.trustAsHtml(deliveryInfo[scope.lang] || '')
+                                               : '';
           });
         });
-      }
+      },
     };
-  }
+  },
 ]);
