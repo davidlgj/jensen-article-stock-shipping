@@ -16,7 +16,6 @@ angular.module('twsArticleStockShipping').directive('twsArticleStockShipping',
           if (!value) { return; }
 
           ArticleService.update(scope.articleUid).then(function(articleData) {
-            const { lang } = scope;
             const stock = articleData.article.stock;
             const deliveryInfo = articleData.article.deliveryInfo;
 
@@ -24,8 +23,11 @@ angular.module('twsArticleStockShipping').directive('twsArticleStockShipping',
             scope.articleData = articleData;
             scope.schemaForm  = articleData.schemaForm;
 
-            scope.stockMessage =  stock.message ? $sce.trustAsHtml(stock.message[lang] || '') : '';
-            scope.deliveryInfo =  deliveryInfo ? $sce.trustAsHtml(deliveryInfo[lang] || '') : '';
+            scope.stockMessage =  stock.message ? $sce.trustAsHtml(stock.message[scope.lang] || '')
+                                                : '';
+
+            scope.deliveryInfo =  deliveryInfo ? $sce.trustAsHtml(deliveryInfo[scope.lang] || '')
+                                               : '';
           });
         });
       },
