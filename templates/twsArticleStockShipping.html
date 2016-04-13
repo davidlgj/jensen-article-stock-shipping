@@ -3,13 +3,13 @@
     <div class='col-md-12'>
       <div class="tws-article-stock-shipping--stock-info">
         <div ng-if="article.stock.useStock">
-          <p ng-if="!articleData.hasStockInVariants">{{article.stock.message[lang]}}</p>
+          <p ng-if="!articleData.hasStockInVariants" ng-bind-html="stockMessage"></p>
           <p ng-if="articleData.hasStockInVariants && articleData.currentStock !== undefined">
             {{gettext('In stock')}}: {{articleData.currentStock}}
           </p>
         </div>
       </div>
-      <p ng-if="article.deliveryInfo && article.deliveryInfo[lang] !== null && !articleData.hasStockInVariants">{{gettext('Delivery')}}: {{article.deliveryInfo[lang]}}</p>
+      <p ng-if="article.deliveryInfo && article.deliveryInfo[lang] !== null && !articleData.hasStockInVariants">{{gettext('Delivery')}}: <span ng-bind-html="deliveryInfo"></span></p>
     </div>
   </div>
 </div>

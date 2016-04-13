@@ -1,4 +1,4 @@
 {
-  "preset": "google",
+  "preset": "airbnb",
   "maximumLineLength": 100
 }
