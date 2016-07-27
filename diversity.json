@@ -2,7 +2,7 @@
   "name": "jensen-article-stock-shipping",
   "title": "Article Stock and shipping info",
   "description": "One the the article components, the stock shipping of it.",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "angular": "jensenArticleStockShipping",
   "template": "component.mustache.html",
   "dependencies": {
