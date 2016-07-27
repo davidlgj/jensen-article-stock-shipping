@@ -7,7 +7,7 @@ angular.module('twsArticleStockShipping').directive('twsArticleStockShipping',
       scope: {
         'articleUid': '=articleUid'
       },
-      templateUrl: 'tws-article-stock-shipping/templates/twsArticleStockShipping.html',
+      templateUrl: 'jensen-article-stock-shipping/templates/jensenArticleStockShipping.html',
       link: function(scope, element, attrs) { //jshint ignore:line
         jed(scope, 'tws-article-stock-shipping');
         scope.lang = locale.language();
