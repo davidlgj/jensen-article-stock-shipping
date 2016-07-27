@@ -1,4 +1,4 @@
-angular.module('twsArticleStockShipping').directive('twsArticleStockShipping',
+angular.module('jensenArticleStockShipping').directive('jensenArticleStockShipping',
 ['twsApi.Jed', 'twsApi.Locale', '$q', 'twsArticleService.ArticleService', '$sce',
   function(jed, locale, $q, ArticleService, $sce) {
     'use strict';
