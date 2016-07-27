@@ -23,8 +23,15 @@ angular.module('twsArticleStockShipping').directive('twsArticleStockShipping',
             scope.articleData = articleData;
             scope.schemaForm  = articleData.schemaForm;
 
-            scope.stockMessage =  stock.message ? $sce.trustAsHtml(stock.message[scope.lang] || '')
-                                                : '';
+            const apiStockMessage = stock.message[scope.lang] || '';
+            const parsedStock = parseInt(apiStockMessage.replace(/[^\d]*/, ''), 10);
+            if (!isNaN(parsedStock)) {
+              // Hardcoded to 50 cm units
+              scope.stockMessage = `I lager: ${parsedStock * 50} cm`;
+            } else {
+              scope.stockMessage =  stock.message ? $sce.trustAsHtml(apiStockMessage) : '';
+            }
+
 
             scope.deliveryInfo =  deliveryInfo ? $sce.trustAsHtml(deliveryInfo[scope.lang] || '')
                                                : '';

@@ -2,11 +2,12 @@
   <div class="row">
     <div class='col-md-12'>
       <div class="tws-article-stock-shipping--stock-info">
-        <div ng-if="article.stock.useStock">
-          <p ng-if="!articleData.hasStockInVariants" ng-bind-html="stockMessage"></p>
-          <p ng-if="articleData.hasStockInVariants && articleData.currentStock !== undefined">
-            {{gettext('In stock')}}: {{articleData.currentStock}}
-          </p>
+        <!--
+          HACK: If we have unit "50 cm" we show it as a cm value, if not we now there is always
+          just one so we don't show it at all
+        -->
+        <div ng-if="article.unit.sv === '50 cm' && article.stock.useStock">
+          <p ng-bind-html="stockMessage"></p>
         </div>
       </div>
       <p ng-if="article.deliveryInfo && article.deliveryInfo[lang] !== null && !articleData.hasStockInVariants">{{gettext('Delivery')}}: <span ng-bind-html="deliveryInfo"></span></p>
