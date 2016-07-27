@@ -1,1 +1,1 @@
-angular.module('jensenArticleStockShipping', ['jensenArticleService', 'twsApi']);
+angular.module('jensenArticleStockShipping', ['twsArticleService', 'twsApi']);
