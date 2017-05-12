@@ -1,1 +1,1 @@
-require('diversity-build');
+require('@textalk/diversity-build');

@@ -5,13 +5,9 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /tws-article-stock-shipping/templates/twsArticleStockShipping.html:7
-msgid "In stock"
-msgstr ""
-
-#: /tws-article-stock-shipping/templates/twsArticleStockShipping.html:11
+#: /jensen-article-stock-shipping/templates/jensenArticleStockShipping.html:12
 msgid "Delivery"
 msgstr ""
