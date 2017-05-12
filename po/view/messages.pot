@@ -8,10 +8,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 
-#: /tws-article-stock-shipping/templates/twsArticleStockShipping.html:7
-msgid "In stock"
-msgstr ""
-
-#: /tws-article-stock-shipping/templates/twsArticleStockShipping.html:11
+#: /jensen-article-stock-shipping/templates/jensenArticleStockShipping.html:12
 msgid "Delivery"
 msgstr ""
