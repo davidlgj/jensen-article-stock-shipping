@@ -4,7 +4,9 @@
   "description": "Stock and shipping component",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "karma start test/karma.conf.js",
+    "lint-css": "gulp lint-css",
+    "lint-js": "gulp lint",
+    "translations": "gulp translations-update",
     "build": "gulp minify"
   },
   "author": "Textalk",

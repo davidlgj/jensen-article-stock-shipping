@@ -40,5 +40,9 @@
     "nl": {
       "view": "po/view/nl.json"
     }
-  }
+  },
+  "release": [
+    "translations",
+    "build"
+  ]
 }
